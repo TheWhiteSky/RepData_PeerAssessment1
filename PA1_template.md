@@ -50,7 +50,7 @@ names(stepsdata) <- c("date", "total.steps")
 histogram(stepsdata$total.steps, xlab = "Total Steps",ylab = "Frequency", main ="total number of steps taken each day", breaks =  20)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![](figure/plot1.png)<!-- -->
 
 ####3. Calculate and report the mean and median of the total number of steps taken per day
 
@@ -83,7 +83,7 @@ intervaldata <- aggregate(x= list(steps = activity$steps), by =list(interval = a
 xyplot(intervaldata$steps ~ intervaldata$interval, type = "l", xlab ="5-minute interval", ylab = "the average number of steps taken", main = "Average daily activity pattern")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![](figure/plot2.png)<!-- -->
 
 ####2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -147,7 +147,7 @@ names(stepsdata) <- c("date","total.steps")
 histogram(stepsdata$total.steps, xlab = "Total Steps", ylab = "Frequency", main ="total number of steps taken each day", breaks =  20)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
+![](figure/plot3.png)<!-- -->
 
 ```r
 afterstepsmean <- mean(stepsdata$total.steps, na.rm = TRUE)
@@ -200,4 +200,4 @@ with(aggdata,
      xyplot(steps ~ interval | weekday, type="l", xlab = "Interval", ylab = "Number of steps", layout = c(1, 2)))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
+![](figure/plot4.png)<!-- -->
